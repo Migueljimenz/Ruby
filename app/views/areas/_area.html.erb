@@ -1,0 +1,12 @@
+<tbody>
+  <tr>
+    <td colspan="2",id="BotonArea" >
+        <%= button_to area.nombreArea, area_programas_url(area), method: :get, id:"linkBotonArea"%>
+    </td>
+    <td id="botonesAccion">
+        <%= button_to 'Editar', edit_area_url(area), :method => :get, id:"BotonAccion" , form: {data: {turbo_confirm: 'Desea editar este Area'} }%>
+        <%= button_to 'Eliminar', area, method: :delete, id:"BotonAccion" , form: {data: {turbo_confirm: 'Desea eliminar esta Area'} }%> 
+    </td>
+  </tr>  
+</tbody>
+
