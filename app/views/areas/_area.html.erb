@@ -1,12 +1,29 @@
 <tbody>
   <tr>
-    <td colspan="2",id="BotonArea" >
-        <%= button_to area.nombreArea, area_programas_url(area), method: :get, id:"linkBotonArea"%>
+    <td>
+      <div id="imagen">
+        <nav id="menu" onclick="menu()">
+          <ul>
+            <li><i class="fa fa-bars" aria-hidden="true" ></i>
+              <ul>
+                <li>
+                  <%= button_to 'Editar' , edit_area_url(area), :method=> :get,form: {data: {turbo_confirm: 'Desea editar
+                    este Area'} }, id:"opctionMenu"%>
+                </li>
+                <li>
+                  <%= button_to 'Eliminar' , area, method: :delete, form: {data: {turbo_confirm: 'Desea eliminar esta Area'
+                    } },  id:"opctionMenu"%>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <%= image_tag area.avatar_url if area.avatar.present? %>
+      </div>
+      <%= button_to area.nombreArea, area_programas_url(area), method: :get, id:"nombreArea"%>
     </td>
-    <td id="botonesAccion">
-        <%= button_to 'Editar', edit_area_url(area), :method => :get, id:"BotonAccion" , form: {data: {turbo_confirm: 'Desea editar este Area'} }%>
-        <%= button_to 'Eliminar', area, method: :delete, id:"BotonAccion" , form: {data: {turbo_confirm: 'Desea eliminar esta Area'} }%> 
-    </td>
-  </tr>  
+  </tr>
 </tbody>
+
+
 

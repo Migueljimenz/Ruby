@@ -1,12 +1,9 @@
 .application {
   position: fixed;
-  left: 0px;
-  bottom: 0px;
+  bottom: 0;
   height: 30px;
   width: 100%;
   background: #000;
-
-
 }
 
 #textFooter {
